@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "rgate": {
+      "url": "https://www.rgate.io/api/mcp",
+      "transport": "streamable-http"
+    }
+  }
+}

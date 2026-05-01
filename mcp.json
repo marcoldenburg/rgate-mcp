@@ -1,0 +1,34 @@
+{
+  "name": "rgate",
+  "title": "RGate",
+  "description": "Release gate agents call before they tell users a public website is ready to ship. Scans public websites across security, SEO, accessibility, legal compliance, and sustainability.",
+  "url": "https://www.rgate.io/api/mcp",
+  "transport": "streamable-http",
+  "version": "1.0.0",
+  "website": "https://www.rgate.io",
+  "manifest": "https://www.rgate.io/.well-known/mcp.json",
+  "openapi": "https://www.rgate.io/openapi.json",
+  "docs": "https://www.rgate.io/en/developers",
+  "tags": [
+    "developer-tools",
+    "release-readiness",
+    "mcp",
+    "agent-tools",
+    "website-audit",
+    "security",
+    "seo",
+    "accessibility",
+    "compliance",
+    "sustainability"
+  ],
+  "tools": [
+    "start_scan",
+    "get_scan",
+    "list_checks",
+    "get_pricing",
+    "create_checkout_handoff",
+    "generate_fix_plan",
+    "export_scan_markdown",
+    "compare_scan_history"
+  ]
+}
