@@ -69,6 +69,7 @@ Agents can start a scan, poll structured results, inspect the check catalog, gen
 
 ## Directory Metadata
 
+- Glama: [`glama.json`](./glama.json) at repo root (maintainer claim for [listing](https://glama.ai/mcp/servers/marcoldenburg/rgate-mcp))
 - Name: `rgate`
 - Title: `RGate`
 - Description: `Release gate agents call before they tell users a public website is ready to ship. Scans public websites across security, SEO, accessibility, legal compliance, and sustainability.`
