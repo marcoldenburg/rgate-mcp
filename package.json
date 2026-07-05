@@ -1,0 +1,15 @@
+{
+  "name": "rgate-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "stdio bridge to the hosted RGate MCP server (https://www.rgate.io/api/mcp). Lets local stdio runners and directory build-checks (e.g. Glama) exercise the remote Streamable-HTTP server.",
+  "scripts": {
+    "start": "mcp-remote https://www.rgate.io/api/mcp"
+  },
+  "dependencies": {
+    "mcp-remote": "^0.1.37"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
