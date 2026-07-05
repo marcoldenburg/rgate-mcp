@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install
+        run: npm install
+      - name: Validate config JSON
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('package.json','utf8')); console.log('package.json OK')"
+          node -e "JSON.parse(require('fs').readFileSync('mcp.json','utf8')); console.log('mcp.json OK')"
+          node -e "JSON.parse(require('fs').readFileSync('glama.json','utf8')); console.log('glama.json OK')"
+      - name: Verify bridge binary is present
+        run: test -x node_modules/.bin/mcp-remote && echo "mcp-remote bridge available"
