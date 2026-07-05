@@ -1,5 +1,7 @@
 # RGate MCP Server
 
+[![Glama MCP server card](https://glama.ai/mcp/servers/marcoldenburg/rgate-mcp/badges/card.svg)](https://glama.ai/mcp/servers/marcoldenburg/rgate-mcp)
+
 RGate is the release gate agents call before they tell users a public website is ready to ship.
 
 This repository documents the public RGate MCP server for agentic IDEs, coding agents, and MCP clients. The RGate product source code is not published here; this repo is the public integration and directory listing home for the operated MCP endpoint.
