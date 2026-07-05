@@ -74,3 +74,24 @@ Agents can start a scan, poll structured results, inspect the check catalog, gen
 - Title: `RGate`
 - Description: `Release gate agents call before they tell users a public website is ready to ship. Scans public websites across security, SEO, accessibility, legal compliance, and sustainability.`
 - Tags: `developer-tools`, `release-readiness`, `mcp`, `agent-tools`, `website-audit`, `security`, `seo`, `accessibility`, `compliance`, `sustainability`
+
+## Running as a local stdio server (build checks / directory harnesses)
+
+RGate is a **remote** MCP server hosted at `https://www.rgate.io/api/mcp`
+(transport: Streamable HTTP). Some runners — including Glama's automated
+build/quality check — start a local stdio process and speak MCP to it. This
+repo doubles as a thin stdio↔remote bridge for exactly that:
+
+```bash
+npm install
+npm start          # = mcp-remote https://www.rgate.io/api/mcp
+```
+
+### Glama admin configuration
+
+- **Build steps:** `["npm install"]`
+- **Start command:** `npm start` (or `mcp-remote https://www.rgate.io/api/mcp`)
+- Node.js ≥ 18; Python/base-image defaults are fine.
+
+For direct clients (Cursor, Claude, VS Code) just use the remote URL from
+`mcp.json` — no bridge needed.
